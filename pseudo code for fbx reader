@@ -1,0 +1,42 @@
+pseudo code for fbx reader
+
+select filepath
+import file(s)
+separate file by "-"?
+
+
+class Face: 
+
+	#read-only
+	Vertex v1 = null
+	Vertex v2 = null
+	Vertex v3 = null
+	Vertex v4 = null
+	bool isTri = False
+		- in constructor, set isTri to True if v4 != null
+
+	ID vertex_id_hash = null (3/4 vertex indices hashed)
+	ID normal_hash = null (3/4 vertex normal directions hashed)
+
+	Normal faceNormal = null (average of vertex normals)
+
+	bool isNgon = False (set in constructor if array length is >4)
+	bool isCoplanar = False
+
+	Face coplanarFace = null
+	Face(Vertex[])
+
+	Face[] linkedFaces = null
+
+	bool isFlippedNormal = False (if the face normal is near opposite the normals if it's linkedFaces)
+
+class Vertex:
+
+	#read-only
+	float [] Coords = [0,0,0]
+	float Normal = 0
+	float [] UV = 0, 0 (?)
+	color Colour = 0,0,0
+	ID vertex_id = null (hash of normals and coords)
+
+	bool isOrphaned = null (if the vertex doesn't appear in any face description)

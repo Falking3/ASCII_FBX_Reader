@@ -1,0 +1,15 @@
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\bin\Debug\net8.0\ConsoleTesting.exe
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\bin\Debug\net8.0\ConsoleTesting.deps.json
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\bin\Debug\net8.0\ConsoleTesting.runtimeconfig.json
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\bin\Debug\net8.0\ConsoleTesting.dll
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\bin\Debug\net8.0\ConsoleTesting.pdb
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.AssemblyInfoInputs.cache
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.AssemblyInfo.cs
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.csproj.CoreCompileInputs.cache
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.sourcelink.json
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.dll
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\refint\ConsoleTesting.dll
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.pdb
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ConsoleTesting.genruntimeconfig.cache
+D:\Github\ASCII_FBX_Reader\ConsoleTesting\obj\Debug\net8.0\ref\ConsoleTesting.dll

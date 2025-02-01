@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ASCII_FBX_Reader/1.0.0": {
+        "runtime": {
+          "ASCII_FBX_Reader.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ASCII_FBX_Reader/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
