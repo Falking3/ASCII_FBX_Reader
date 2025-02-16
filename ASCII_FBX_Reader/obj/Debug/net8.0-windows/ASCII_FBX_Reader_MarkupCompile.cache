@@ -1,7 +1,7 @@
 ﻿ASCII_FBX_Reader
 
 
-winexe
+exe
 C#
 .cs
 D:\Github\ASCII_FBX_Reader\ASCII_FBX_Reader\obj\Debug\net8.0-windows\
@@ -12,8 +12,8 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Github\ASCII_FBX_Reader\ASCII_FBX_Reader\App.xaml
 11407045341
 
-4-568428862
-198155382431
+6-1155532366
+198-352714763
 MainWindow.xaml;
 
 False
