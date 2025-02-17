@@ -2,7 +2,7 @@
 
 public class Face
 {
-    Vertex[] Verts = new Vertex[4];
+    public List<Vertex> verts = new List<Vertex>();
     int FaceID = 0;
     bool tri = false;
     bool quad = false;
@@ -11,10 +11,10 @@ public class Face
     public Face()
     {
     }
-    public Face(Vertex[]verts, int ID)
+    public Face(List<Vertex> Verts, int ID)
     {
         Verts = verts;
-        if (verts[3] == 0)
+        if (verts[3] == null)
         {
             tri = true;
         }
@@ -26,6 +26,6 @@ public class Face
     }
     public void Print()
     {
-        Console.WriteLine($"Face ID: {FaceID}, Verts: {Verts.ToString()}");
+        Console.WriteLine($"Face ID: {FaceID}, Verts: {verts}");
     }
 }
