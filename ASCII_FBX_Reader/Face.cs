@@ -24,8 +24,17 @@ public class Face
         }
         FaceID = ID;
     }
+    public Face(int ID)
+    {
+        FaceID = ID;
+    }
     public void Print()
     {
-        Console.WriteLine($"Face ID: {FaceID}, Verts: {verts}");
+        Console.WriteLine($"Face ID: {FaceID}");
+        foreach (Vertex vert in verts)
+        {
+            vert.Print();
+        }
+
     }
 }
