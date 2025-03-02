@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button Click="ReadModelButton_Click" Margin="297,180,297,180">Read Model</Button>
+        <Button Click="LoadModelButton_Click" Margin="297,86,297,274" Content="LoadModel"/>
 
     </Grid>
 </Window>

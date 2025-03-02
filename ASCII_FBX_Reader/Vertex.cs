@@ -3,11 +3,11 @@
 public class Vertex
 {
 	Vector3 Coords = new Vector3(0,0,0);
-    Vector3 Normal = new Vector3(0, 0, 0);
+    public Vector3 Normal = new Vector3(0, 0, 0);
     Vector3 Colour = new Vector3(0, 0, 0);
 	Vector2 UVCoords = new Vector2(0,0);	
 
-    int VertexID = 0;
+    public int VertexID = 0;
 	public Vertex()
 	{
 	}
@@ -18,6 +18,6 @@ public class Vertex
 	}
 	public void Print()
 	{
-		Console.WriteLine($"Vertex ID: {VertexID}, Coords: {Coords.ToString()}");
+		Console.WriteLine($"Vertex ID: {VertexID}, Coords: {Coords.ToString()}, Normals: {Normal}");
 	}
 }

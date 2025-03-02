@@ -3,7 +3,10 @@
 public class Model
 {
     public List<Face> faces = new List<Face>();
-    string modelName = null;
+    string modelName = null; //needs implemented properly
+    //tri count
+    //vert count
+    //various flags for things being wrong
 
     public Model()
     {

@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace ASCII_FBX_Reader
 {
@@ -20,5 +21,36 @@ namespace ASCII_FBX_Reader
         {
             InitializeComponent();
         }
+        private string filepath = "";
+        private void ReadModelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Hello, World!");
+
+            //validate filepath
+            if(filepath != "") 
+            {
+                Model model = ModelRead.Read(filepath);
+
+                //WPF display for the output
+                model.Print();
+            }
+            else
+            {
+                Console.WriteLine("Empty filepath");
+            }
+
+
+        }
+        private void LoadModelButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                filepath = openFileDialog.FileName;
+                Console.WriteLine($"{filepath}");
+            }
+
+        }
     }
+
 }
