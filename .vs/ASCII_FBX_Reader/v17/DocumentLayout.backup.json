@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\Github\\ASCII_FBX_Reader\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\face.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\face.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\modelread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\modelread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\face.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\face.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\vertex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\vertex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Program.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Program.cs",
@@ -64,16 +64,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Face.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Face.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Face.cs",
               "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Face.cs",
               "RelativeToolTip": "ASCII_FBX_Reader\\Face.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowA0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T23:06:37.402Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -123,40 +124,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ModelRead.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\ModelRead.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\ModelRead.cs",
               "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\ModelRead.cs",
               "RelativeToolTip": "ASCII_FBX_Reader\\ModelRead.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAADgv3cAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAJsAAAAAAAAAAADwv6IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T20:28:38.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Model.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Model.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Model.cs",
               "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Model.cs",
               "RelativeToolTip": "ASCII_FBX_Reader\\Model.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T21:03:54.082Z"
+              "WhenOpened": "2025-02-18T21:03:54.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Vertex.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Vertex.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Vertex.cs",
               "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Vertex.cs",
               "RelativeToolTip": "ASCII_FBX_Reader\\Vertex.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:26:37.72Z"
+              "WhenOpened": "2025-02-16T16:26:37.72Z",
+              "EditorCaption": ""
             }
           ]
         }

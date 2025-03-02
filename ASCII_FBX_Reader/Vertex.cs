@@ -5,7 +5,7 @@ public class Vertex
 	Vector3 Coords = new Vector3(0,0,0);
     public Vector3 Normal = new Vector3(0, 0, 0);
     Vector3 Colour = new Vector3(0, 0, 0);
-	Vector2 UVCoords = new Vector2(0,0);	
+	List<Vector2> UVCoords = new List<Vector2>();	
 
     public int VertexID = 0;
 	public Vertex()

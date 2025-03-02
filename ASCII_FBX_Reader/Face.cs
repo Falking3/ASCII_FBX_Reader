@@ -3,6 +3,9 @@
 public class Face
 {
     public List<Vertex> verts = new List<Vertex>();
+    public List<Vector3> normals = new List<Vector3>();
+    public List<int> polyvert_IDs = new List<int>();
+    public List<Vector2> uvs = new List<Vector2>();
     int FaceID = 0;
     bool tri = false;
     bool quad = false;
@@ -35,6 +38,25 @@ public class Face
         {
             vert.Print();
         }
+        Console.Write("Normals: ");
+        foreach (Vector3 v in normals)
+        {
+            Console.Write($"{v}");
+        }
 
+        Console.WriteLine();
+        Console.Write("Polyvert IDs:");
+        foreach (int i in polyvert_IDs)
+        {
+            Console.Write($" {i}");
+        }
+        Console.WriteLine();
+        Console.Write("UVs: ");
+        foreach (Vector2 vector2 in uvs) 
+        {
+            Console.Write($"{vector2}");
+        }
+        Console.WriteLine();
+        Console.WriteLine("////////////////////");
     }
 }

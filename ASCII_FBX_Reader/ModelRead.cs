@@ -74,10 +74,18 @@ public static class ModelRead
             {
                 moveToNewFace = true;
                 curface.verts.Add(Vert_To_ID[(face_index_array[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
+                curface.normals.Add(new Vector3(0, 0, 0));
+                curface.polyvert_IDs.Add(i);
+                curface.uvs.Add(new Vector2(0, 0));
+                
             }
             else
             {
                 curface.verts.Add(Vert_To_ID[face_index_array[i]]);
+                curface.normals.Add(new Vector3(0, 0, 0));
+                curface.polyvert_IDs.Add(i);
+                curface.uvs.Add(new Vector2(0, 0));
+
             }
 
         }
@@ -102,32 +110,82 @@ public static class ModelRead
         /////////////////////////////////////////////////
         ///
 
+        //The VALUE of NormalsIndex relates to the position of the normal in the "Normals" array.
+        //The polygon vertices that the normals belong to are the order listed in "PolygonVertexIndex"
 
-        //Regex match for {} after "Normals"
+        //Regex match for {} after "NormalsIndex"
         string regexpattern_normals_index = @"\bNormalsIndex\b.+\n\s+a:([^}]+\n)";
         Regex rg_normals_index = new Regex(regexpattern_normals_index);
         MatchCollection normal_index_matches = rg_normals_index.Matches(ReadContents);
         string normals_index = normal_index_matches[0].Groups[1].Value.ToString();
         int[] normal_index_array = Array.ConvertAll(normals_index.Split(","), int.Parse);
 
-        Vertex currvert = vert_array[0];
-        foreach (int normal_index in normal_index_array)
+        for (int i = 0; i < normal_index_array.Length; ++i)
         {
-            for (int i = 0; i < normal_index_array.Length; ++i) 
-            { 
-                int v_index = normal_index_array[i];
-                foreach(Vertex vert in vert_array)
-                {
-                    if (vert.VertexID == v_index)
-                    {
-                        currvert = vert;
-                    }
-                }
-                currvert.Normal = grouped_normals_list[v_index];
-            }
+        Face currface = faceslist[0];
+        int list_index = 0;
+        int n_index = normal_index_array[i];
 
+        foreach(Face face in faceslist)
+        {
+            foreach(int polyvert_id in face.polyvert_IDs)
+            {
+                if (polyvert_id == n_index)
+                {
+                    list_index = face.polyvert_IDs.IndexOf(polyvert_id);
+                    currface = face;
+                }
+            }
+        }
+            currface.normals[list_index] = grouped_normals_list[n_index];
         }
 
+        
+
+
+        //Regex match for {} after "UV"
+        string regexpattern_uv = @"\bUV\b.+\n\s+a:([^}]+\n)";
+        Regex rg_uv = new Regex(regexpattern_uv);
+        MatchCollection uv_matches = rg_uv.Matches(ReadContents);
+        string uv = uv_matches[0].Groups[1].Value.ToString();
+        float[] uv_array = Array.ConvertAll(uv.Split(","), float.Parse);
+        List<Vector2> uv_list = new List<Vector2>();
+
+        for (int i = 0; i < uv_array.Length; i++)
+        {
+            Vector2 uv_vec = new Vector2(uv_array[i], uv_array[++i]);
+            uv_list.Add(uv_vec);
+        }
+
+        //////////////////////////////////////////////////
+
+
+
+        //Regex match for {} after "UVIndex"
+        string regexpattern_uvindex = @"\bUVIndex\b.+\n\s+a:([^}]+\n)";
+        Regex rg_uvindex = new Regex(regexpattern_uvindex);
+        MatchCollection uvindex_matches = rg_uvindex.Matches(ReadContents);
+        string uvindex = uvindex_matches[0].Groups[1].Value.ToString();
+        int[] uvindex_array = Array.ConvertAll(uvindex.Split(","), int.Parse);
+        List<Vector2> uvindex_list = new List<Vector2>();
+
+        for ( int i = 0;i < uvindex_array.Length; i++)
+        {
+            int uv_index = uvindex_array[i];
+            Vector2 uv_value = uv_list[uv_index];
+
+        foreach(Face face in faceslist)
+            {
+                foreach(int ID in face.polyvert_IDs)
+                {
+                    if (ID == i)
+                    {
+                        int f_index = face.polyvert_IDs.IndexOf(ID);
+                        face.uvs[f_index] = uv_value;
+                    }
+                }
+            }
+        }
         return new Model(faceslist, "Model");
     }
 }
