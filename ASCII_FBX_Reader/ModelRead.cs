@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using System.Numerics;
 using System.Runtime.CompilerServices;
@@ -58,36 +59,54 @@ public static class ModelRead
 
         int faceindex = 0;
         bool moveToNewFace = false;
-        Face curface = new Face(0);
-        faceslist.Add(curface);
         int face_array_index = 0;
+        List<Vertex>vert_list = new List<Vertex>();
+        List<int> polyvert_id_list = new List<int>();
         for (int i = 0; i < face_index_array.Length; i++)
         {
-            if (moveToNewFace == true) //not sure if there's a more elegant solution considering faces have a variable number of vertices
+       
+
+        if (i == face_index_array.Length - 1)
+        {
+                vert_list.Add(Vert_To_ID[(face_index_array[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
+                polyvert_id_list.Add(i);
+                moveToNewFace = true;
+        }
+
+
+        if (moveToNewFace == true) //not sure if there's a more elegant solution considering faces have a variable number of vertices
             {
+                Face curface = new Face(vert_list, polyvert_id_list, face_array_index);
+
+                Console.WriteLine("New face");
+                for (int j = 0; j < vert_list.Count(); j++)
+                {
+                    curface.normals.Add(new Vector3(0, 0, 0));
+                    curface.uvs.Add(new Vector2(0, 0));
+                }
+                faceslist.Add(new Face(curface));
+
                 face_array_index++;
+                vert_list.Clear();
+                polyvert_id_list.Clear();
                 moveToNewFace = false;
-                curface = new Face(face_array_index);
-                faceslist.Add(curface);
             }
+
             if (face_index_array[i] < 0) //a negative value means it's the end of a face
             {
                 moveToNewFace = true;
-                curface.verts.Add(Vert_To_ID[(face_index_array[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
-                curface.normals.Add(new Vector3(0, 0, 0));
-                curface.polyvert_IDs.Add(i);
-                curface.uvs.Add(new Vector2(0, 0));
-                
+                vert_list.Add(Vert_To_ID[(face_index_array[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
+                polyvert_id_list.Add(i);
+
             }
             else
             {
-                curface.verts.Add(Vert_To_ID[face_index_array[i]]);
-                curface.normals.Add(new Vector3(0, 0, 0));
-                curface.polyvert_IDs.Add(i);
-                curface.uvs.Add(new Vector2(0, 0));
+                vert_list.Add(Vert_To_ID[face_index_array[i]]);
+                polyvert_id_list.Add(i);
+
+
 
             }
-
         }
 
         //////////////////////////////////////

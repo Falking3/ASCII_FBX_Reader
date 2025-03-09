@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Github\\ASCII_FBX_Reader\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\face.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\face.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +15,16 @@
       "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\modelread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\vertex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\vertex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\vertex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\vertex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|solutionrelative:ascii_fbx_reader\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7C4743B-4FE7-48A2-8FA0-5F4EC63580A4}|ASCII_FBX_Reader\\ASCII_FBX_Reader.csproj|d:\\github\\ascii_fbx_reader\\ascii_fbx_reader\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -46,17 +46,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Program.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Program.cs",
               "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Program.cs",
               "RelativeToolTip": "ASCII_FBX_Reader\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T16:04:16.111Z",
               "IsPinned": true,
@@ -64,21 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Face.cs",
-              "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Face.cs",
-              "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Face.cs",
-              "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Face.cs",
-              "RelativeToolTip": "ASCII_FBX_Reader\\Face.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T23:06:37.402Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\App.xaml.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\App.xaml.cs",
@@ -101,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\MainWindow.xaml.cs",
@@ -113,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\MainWindow.xaml",
@@ -124,20 +110,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ModelRead.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\ModelRead.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\ModelRead.cs",
               "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\ModelRead.cs",
               "RelativeToolTip": "ASCII_FBX_Reader\\ModelRead.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAADwv6IAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAEgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T20:28:38.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Model.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Model.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Model.cs",
@@ -145,20 +131,32 @@
               "RelativeToolTip": "ASCII_FBX_Reader\\Model.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T21:03:54.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T21:03:54.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Vertex.cs",
               "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Vertex.cs",
               "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Vertex.cs",
               "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Vertex.cs",
               "RelativeToolTip": "ASCII_FBX_Reader\\Vertex.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T16:26:37.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Face.cs",
+              "DocumentMoniker": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Face.cs",
+              "RelativeDocumentMoniker": "ASCII_FBX_Reader\\Face.cs",
+              "ToolTip": "D:\\Github\\ASCII_FBX_Reader\\ASCII_FBX_Reader\\Face.cs",
+              "RelativeToolTip": "ASCII_FBX_Reader\\Face.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T23:06:37.402Z",
               "EditorCaption": ""
             }
           ]
