@@ -9,6 +9,7 @@ using System.Windows.Media;
 
 public static class ModelRead
 {
+    const float diverging_normal_angle = 90f;
 
 	public static Model Read(string path) //populates a new model variable with the data from the specified file
 	{
@@ -20,34 +21,51 @@ public static class ModelRead
             ReadContents = streamReader.ReadToEnd();
         }
 
+
         //Regex match for {} after "Vertices"
-        string regexpattern = @"\bVertices\b.+\n\s+a:([^}]+\n)";
-        Regex rg = new Regex(regexpattern);
-        MatchCollection matches = rg.Matches(ReadContents);
-        string verts = matches[0].Groups[1].Value.ToString(); //This is the first real matching group
-        float[] coords_array = Array.ConvertAll(verts.Split(","), float.Parse); //Splits a string into an array of floats based on commas
+        List<float> coords_list = new List<float>();
+        coords_list = ParseFBXValues.Parse(@"\bVertices\b.+\n\s+a:([^}]+\n)", ReadContents, coords_list);
+
+        //Regex match for {} after "UVIndex"
+        List<int> uvindex_list = new List<int>();
+        uvindex_list = ParseFBXValues.Parse(@"\bUVIndex\b.+\n\s+a:([^}]+\n)", ReadContents, uvindex_list);
 
         //Regex match for {} after "PolygonVertexIndex"
-        string regexpattern_faces = @"\bPolygonVertexIndex\b.+\n\s+a:([^}]+\n)";
-        Regex rg_faces = new Regex(regexpattern_faces);
-        MatchCollection face_matches = rg_faces.Matches(ReadContents);
-        string faces = face_matches[0].Groups[1].Value.ToString();
-        int[] face_index_array = Array.ConvertAll(faces.Split(","), int.Parse);
+        List<int>face_index_list = new List<int>();
+        face_index_list = ParseFBXValues.Parse(@"\bPolygonVertexIndex\b.+\n\s+a:([^}]+\n)", ReadContents, face_index_list);
 
-        //Set up lists
+
+        //Regex match for {} after "Normals"
+        List<float> normals_list = new List<float>();
+        normals_list = ParseFBXValues.Parse(@"\bNormals\b.+\n\s+a:([^}]+\n)", ReadContents, normals_list);
+
+        //Regex match for {} after "NormalsIndex"
+        List<int> normal_index_list = new List<int>();
+        normal_index_list = ParseFBXValues.Parse(@"\bNormalsIndex\b.+\n\s+a:([^}]+\n)", ReadContents, normal_index_list);
+
+
+        //Regex match for {} after "UV"
+        List<Vector2> uv_list = new List<Vector2>();
+        uv_list = ParseFBXValues.Parse(@"\bUV\b.+\n\s+a:([^}]+\n)", ReadContents, uv_list);
+
+        //Regex match for "Material:: (materialname)"
+        List<string> material_list = new List<string>();
+        material_list = ParseFBXValues.Parse(@"""Material::([^""]+)""", ReadContents, material_list);
+
+
+        //Set up component lists/dicts
         List<Vertex> vert_array = new List<Vertex>(); 
         List<Face> faceslist = new List<Face>();
         Dictionary<int, Vertex> Vert_To_ID = new Dictionary<int, Vertex>(); //do we use this?
 
 
-        //fill out vertices
-        //
+        //fill out vertices --------------------------------------------------
 
         int index = -1; //can we tie this into the loop iterator at all?
-        for (int i = 0; i < coords_array.Length - 2; i += 3)
+        for (int i = 0; i < coords_list.Count - 2; i += 3)
         {
             index++; //verts are groups of 3 coords, this is the index of the vertex
-            Vertex vertex = new Vertex(coords_array[i], coords_array[i + 1], coords_array[i + 2], index);
+            Vertex vertex = new Vertex(coords_list[i], coords_list[i + 1], coords_list[i + 2], index);
             Vert_To_ID[index] = vertex;
             vert_array.Add(vertex);
         }
@@ -62,13 +80,13 @@ public static class ModelRead
         int face_array_index = 0;
         List<Vertex>vert_list = new List<Vertex>();
         List<int> polyvert_id_list = new List<int>();
-        for (int i = 0; i < face_index_array.Length; i++)
+        for (int i = 0; i < face_index_list.Count; i++)
         {
        
 
-        if (i == face_index_array.Length - 1)
+        if (i == face_index_list.Count - 1)
         {
-                vert_list.Add(Vert_To_ID[(face_index_array[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
+                vert_list.Add(Vert_To_ID[(face_index_list[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
                 polyvert_id_list.Add(i);
                 moveToNewFace = true;
         }
@@ -92,16 +110,16 @@ public static class ModelRead
                 moveToNewFace = false;
             }
 
-            if (face_index_array[i] < 0) //a negative value means it's the end of a face
+            if (face_index_list[i] < 0) //a negative value means it's the end of a face
             {
                 moveToNewFace = true;
-                vert_list.Add(Vert_To_ID[(face_index_array[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
+                vert_list.Add(Vert_To_ID[(face_index_list[i] * -1 - 1)]); //XOR with -1 to get actual vertex index
                 polyvert_id_list.Add(i);
 
             }
             else
             {
-                vert_list.Add(Vert_To_ID[face_index_array[i]]);
+                vert_list.Add(Vert_To_ID[face_index_list[i]]);
                 polyvert_id_list.Add(i);
 
 
@@ -109,20 +127,10 @@ public static class ModelRead
             }
         }
 
-        //////////////////////////////////////
-
-
-        //Regex match for {} after "Normals"
-        string regexpattern_normals = @"\bNormals\b.+\n\s+a:([^}]+\n)";
-        Regex rg_normals = new Regex(regexpattern_normals);
-        MatchCollection normal_matches = rg_normals.Matches(ReadContents);
-        string normals = normal_matches[0].Groups[1].Value.ToString();
-        float[] normal_array = Array.ConvertAll(normals.Split(","), float.Parse);
-
         List<Vector3> grouped_normals_list = new List<Vector3>();
-        for (int i = 0; i < normal_array.Length; i++)
+        for (int i = 0; i < normals_list.Count; i++)
         {   
-            Vector3 normal_index = new Vector3(normal_array[i], normal_array[++i], normal_array[++i]);
+            Vector3 normal_index = new Vector3(normals_list[i], normals_list[++i], normals_list[++i]);
             grouped_normals_list.Add(normal_index);
         }
 
@@ -132,18 +140,12 @@ public static class ModelRead
         //The VALUE of NormalsIndex relates to the position of the normal in the "Normals" array.
         //The polygon vertices that the normals belong to are the order listed in "PolygonVertexIndex"
 
-        //Regex match for {} after "NormalsIndex"
-        string regexpattern_normals_index = @"\bNormalsIndex\b.+\n\s+a:([^}]+\n)";
-        Regex rg_normals_index = new Regex(regexpattern_normals_index);
-        MatchCollection normal_index_matches = rg_normals_index.Matches(ReadContents);
-        string normals_index = normal_index_matches[0].Groups[1].Value.ToString();
-        int[] normal_index_array = Array.ConvertAll(normals_index.Split(","), int.Parse);
 
-        for (int i = 0; i < normal_index_array.Length; ++i)
+        for (int i = 0; i < normal_index_list.Count; ++i)
         {
         Face currface = faceslist[0];
         int list_index = 0;
-        int n_index = normal_index_array[i];
+        int n_index = normal_index_list[i];
 
         foreach(Face face in faceslist)
         {
@@ -159,42 +161,20 @@ public static class ModelRead
             currface.normals[list_index] = grouped_normals_list[n_index];
         }
 
-        
-
-
-        //Regex match for {} after "UV"
-        string regexpattern_uv = @"\bUV\b.+\n\s+a:([^}]+\n)";
-        Regex rg_uv = new Regex(regexpattern_uv);
-        MatchCollection uv_matches = rg_uv.Matches(ReadContents);
-        string uv = uv_matches[0].Groups[1].Value.ToString();
-        float[] uv_array = Array.ConvertAll(uv.Split(","), float.Parse);
-        List<Vector2> uv_list = new List<Vector2>();
-
-        for (int i = 0; i < uv_array.Length; i++)
-        {
-            Vector2 uv_vec = new Vector2(uv_array[i], uv_array[++i]);
-            uv_list.Add(uv_vec);
-        }
+       
 
         //////////////////////////////////////////////////
 
 
 
-        //Regex match for {} after "UVIndex"
-        string regexpattern_uvindex = @"\bUVIndex\b.+\n\s+a:([^}]+\n)";
-        Regex rg_uvindex = new Regex(regexpattern_uvindex);
-        MatchCollection uvindex_matches = rg_uvindex.Matches(ReadContents);
-        string uvindex = uvindex_matches[0].Groups[1].Value.ToString();
-        int[] uvindex_array = Array.ConvertAll(uvindex.Split(","), int.Parse);
-        List<Vector2> uvindex_list = new List<Vector2>();
-
-        for ( int i = 0;i < uvindex_array.Length; i++)
+        for ( int i = 0;i < uvindex_list.Count; i++)
         {
-            int uv_index = uvindex_array[i];
+            int uv_index = uvindex_list[i];
             Vector2 uv_value = uv_list[uv_index];
 
         foreach(Face face in faceslist)
             {
+                face.CheckDivergingNormals(diverging_normal_angle);
                 foreach(int ID in face.polyvert_IDs)
                 {
                     if (ID == i)
@@ -205,7 +185,9 @@ public static class ModelRead
                 }
             }
         }
-        return new Model(faceslist, "Model");
+
+        
+        return new Model(faceslist, "Model", material_list);
     }
 }
 

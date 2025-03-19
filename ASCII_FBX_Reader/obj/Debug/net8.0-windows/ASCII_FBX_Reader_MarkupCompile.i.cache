@@ -4,16 +4,16 @@
 exe
 C#
 .cs
-D:\Github\ASCII_FBX_Reader\ASCII_FBX_Reader\obj\Debug\net8.0-windows\
+C:\Users\dunca\Documents\GitHub\ASCII_FBX_Reader\ASCII_FBX_Reader\obj\Debug\net8.0-windows\
 ASCII_FBX_Reader
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Github\ASCII_FBX_Reader\ASCII_FBX_Reader\App.xaml
+C:\Users\dunca\Documents\GitHub\ASCII_FBX_Reader\ASCII_FBX_Reader\App.xaml
 11407045341
 
-11456350158
-198-352714763
+13-1885354016
+198-1431420039
 MainWindow.xaml;
 
 False

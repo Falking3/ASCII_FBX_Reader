@@ -1,26 +1,18 @@
 ﻿using System.Text.RegularExpressions;
 using System.IO;
+using ASCII_FBX_Reader;
 
 
 //Application app = new App();
 
 Console.WriteLine("Hello, World!");
-var filepath = @"D:\\GitHub\\ASCII_FBX_Reader\\ascii_test_mesh_01.fbx";  //"C:\\Users\\dunca\\Documents\\GitHub\\ASCII_FBX_Reader\\ascii_test_mesh_01.fbx"
-
+var filepath = @"C:\\Users\\dunca\\Documents\\GitHub\\ASCII_FBX_Reader\\ascii_test_mesh_01.fbx";
+//@"D:\\GitHub\\ASCII_FBX_Reader\\ascii_test_mesh_01.fbx";  
 //WPF file selector
 Model model = ModelRead.Read(filepath);
 
 //WPF display for the output
 model.Print();
 
+ValidateModel.Validate(model);
 
-for (int i = 1; i < model.faces.Count; i++)
-
-{
-    Face face1 = model.faces[i];
-    int j = i -1 ;
-    Face face2 = model.faces[j];
-    Console.WriteLine($"{face1.FaceID} + {face2.FaceID}");
-    Console.WriteLine(face1.Equals(face2));
-
-}

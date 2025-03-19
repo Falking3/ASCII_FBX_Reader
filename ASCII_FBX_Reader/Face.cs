@@ -3,14 +3,16 @@ using System.Windows.Controls;
 
 public class Face
 {
-    public List<Vertex> verts = new List<Vertex>();
-    public List<Vector3> normals = new List<Vector3>();
-    public List<int> polyvert_IDs = new List<int>();
-    public List<Vector2> uvs = new List<Vector2>();
-    public int FaceID = 0;
-    bool tri = false;
-    bool quad = false;
-    bool ngon = false;
+    public List<Vertex> verts { get; } = new List<Vertex>();
+    public List<Vector3> normals { get; set; } = new List<Vector3>();
+    public List<int> polyvert_IDs { get; } = new List<int>();
+    public List<Vector2> uvs { get; set; } = new List<Vector2>();
+
+    public int FaceID { get; } = 0;
+    private bool tri = false;
+    private bool quad = false;
+    private bool ngon = false;
+    private bool diverging_normals = false;
 
     public Face()
     {
@@ -21,10 +23,10 @@ public class Face
         {
             return false;
         }
-        return (verts.Count == temp.verts.Count) && !verts.Except(temp.verts).Any();
+        return (verts.Count == temp.verts.Count) && !verts.Except(temp.verts).Any(); //list has same members, unsorted
 
     }
-    public Face(Face oldface)
+    public Face(Face oldface) //copying
     {
         verts = new List<Vertex>(oldface.verts);
         normals = new List<Vector3>(oldface.normals);
@@ -35,7 +37,7 @@ public class Face
         quad = oldface.quad;
         ngon = oldface.ngon;
     }
-    public Face(List<Vertex> Verts, List<int>polyvert_id_list, int ID)
+    public Face(List<Vertex> Verts, List<int>polyvert_id_list, int ID) //constructor
     {
         foreach(Vertex vert in verts)
         {
@@ -60,12 +62,24 @@ public class Face
         }
         FaceID = ID;
     }
-    public Face(int ID)
+    public void CheckDivergingNormals(float angle)
     {
-        FaceID = ID;
+        float dot_value = //remap angle to dot product
+        foreach (Vector3 normal in normals)
+        {
+            foreach(Vector3 v in normals)
+            {
+                if(System.Numerics.Vector3.Dot(normal, v) <= 0)
+                {
+                    diverging_normals = true;
+                }
+            }
+        }
     }
+
     public void Print()
     {
+        Console.WriteLine($"Diverging normals: {diverging_normals}");
         Console.WriteLine($"Face ID: {FaceID}");
         if (tri == true)
         {

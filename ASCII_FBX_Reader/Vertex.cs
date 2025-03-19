@@ -2,12 +2,12 @@
 
 public class Vertex
 {
-	public Vector3 Coords = new Vector3(0,0,0);
+	public Vector3 Coords { get; set; } = new Vector3(0,0,0);
     //public Vector3 Normal = new Vector3(0, 0, 0); //this is really stored on face corners, wh
     Vector3 Colour = new Vector3(0, 0, 0);
 	List<Vector2> UVCoords = new List<Vector2>();	
 
-    public int VertexID = 0;
+    public int VertexID { get; set; } = 0;
 	public Vertex()
 	{
 	}
