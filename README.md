@@ -10,3 +10,6 @@ The program is pretty bare bones. I've focussed on reading data from the file pr
 ## What am I going to add?
 
 The plan is to continue parsing the FBX data until I've got all the stored data available in the program. Then comes more validation - basic checks like missing UVs, normal modes which break Unity, zero length edges, stacked vertices. Also easily viewable stats (list of animations, tri/vert count stats, submeshs etc). The plan is for this to run through a nice WPF GUI as well. 
+
+![image](https://github.com/user-attachments/assets/5673d272-e886-4d43-baae-eb36bc23b2ef)
+
